@@ -11,3 +11,9 @@ console.log(numero , "x8 =", numero * 8)
 console.log(numero , "x9 =", numero * 9)
 console.log(numero , "x10 =", numero * 10)
 
+## ou use esse codigo
+
+let numero = 9;
+
+for(m = 1 ; m <= 10; m++){
+console.log(numero+ "x" + m, "=" , numero * m)}
