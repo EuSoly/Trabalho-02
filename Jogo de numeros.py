@@ -3,10 +3,10 @@ import random
 #Variaveis
 vidas = ()
 pontos = int()
-play = "sim"
+play = ""
 Tadivinhe = ()
 erros = ()
-jogar = "sim"
+jogar = ""
 
 #Return de jogar novamete
 while jogar.lower() == "sim" or jogar.lower() == "s":
