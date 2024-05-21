@@ -1,19 +1,19 @@
 import random
 
 #Variaveis
-vidas = ()
+vidas = 0
 pontos = int()
-play = ""
-Tadivinhe = ()
-erros = ()
-jogar = ""
+play = "sim"
+Tadivinhe = 0
+erros = 0
+jogar = "sim"
 
 #Return de jogar novamete
 while jogar.lower() == "sim" or jogar.lower() == "s":
 
     #Print de dados inicias
     adivinhe = random.randint(0,10)
-    vidas = + 5
+    vidas = 5
     print("=======Um número de 0 a 10 foi sorteado=======")
     print("você tem", vidas, "tentativas")
 
@@ -30,7 +30,7 @@ while jogar.lower() == "sim" or jogar.lower() == "s":
         #Tentativa errada 
         if Tadivinhe != adivinhe:
             vidas = vidas - 1
-            erros = + 1
+            erros = erros + 1
             print("Você errou!!, você tem", vidas, "tentativas restantes. Último numero usado", Tadivinhe)
 
         #Tentativa Certa
@@ -51,6 +51,12 @@ while jogar.lower() == "sim" or jogar.lower() == "s":
         #Request de jogar novamente
         play = input("Você deseja jogar novamente? ")
     if play.lower() == "nao" or play.lower() == "n":
+        print("===========FIM DE JOGO==========")
+        print("Placar")
+        print(pontos, "Acertos")
+        print(erros , "Erros")
+        break
+    if jogar.lower() == "nao" or jogar.lower() == "n":
         print("===========FIM DE JOGO==========")
         print("Placar")
         print(pontos, "Acertos")
